@@ -11,12 +11,17 @@ export class Contact extends Component {
             showContact: !this.state.showContact
         });
     }
+
+    deleteContactHandler = () => {
+        console.log('DeleteContactHandler!');
+    }
+    
     render() {
         return (
 
             <div className="card card-body my-3">
                 <h3>{this.props.name} 
-                    <i className="fas fa-backspace text-danger mr-5" style = {{cursor: "pointer", float: "right"}}></i> 
+                    <i className="fas fa-backspace text-danger mr-5" onClick = {this.deleteContactHandler} style = {{cursor: "pointer", float: "right"}}></i> 
                 
                     <i className="fas fa-chevron-circle-down mr-5 text-success" onClick = {this.showContactHandler} style = {{cursor: "pointer", float: "right"}}></i>
                 </h3>
