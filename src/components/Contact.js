@@ -13,7 +13,6 @@ export class Contact extends Component {
     }
 
     deleteContactHandler = () => {
-        this.props.deleteContact();
     }
 
     render() {
