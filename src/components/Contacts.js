@@ -4,7 +4,7 @@ import Contact from './Contact';
 import {Consumer} from '../Context';
 
 export class Contacts extends Component {
-    
+
     render(){
         return(
             <Consumer>
@@ -16,7 +16,7 @@ export class Contacts extends Component {
                         <div className="contacts">
                             {contacts.map((contact) =>{
                                 return (
-                                    <Contact key = {contact.key} name = {contact.name} phone = {contact.phone} email = {contact.email}/>
+                                    <Contact key = {contact.id} contact = {contact}/>
                                 )
                             })}
                         </div>

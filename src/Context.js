@@ -2,14 +2,31 @@ import React, { Component } from 'react'
 
 const Context = React.createContext();
 
+// Using reducer
+const reducer = (state, action) =>{
+    switch (action.type){
+        case 'DELETE_CONTACT':
+            // delete a contact
+
+            return {
+                // ...state means existing state
+                ...state,
+                contacts: state.contacts.filter(contact => contact.id !== action.payload)
+            }
+        default:
+            // return the state
+            return state;
+    }
+}
 export class Provider extends Component {
 
     state = {
         contacts: [
-            { key: 1, name: 'John Doe', email: 'jdoe@example.com', phone: '1234567890'},
-            { key: 2, name: 'John Cena', email: 'jcena@example.com', phone: '127823648'},
-            { key: 3, name: 'Micheal Jackson', email: 'mjack@example.com', phone: '23749872389'}
-        ]
+            { id: 1, name: 'John Doe', email: 'jdoe@example.com', phone: '1234567890'},
+            { id: 2, name: 'John Cena', email: 'jcena@example.com', phone: '127823648'},
+            { id: 3, name: 'Micheal Jackson', email: 'mjack@example.com', phone: '23749872389'}
+        ],
+        dispatch: action => this.setState(state => reducer(state, action))
     }
 
     render() {
