@@ -7,6 +7,8 @@ import 'bootstrap/dist/css/bootstrap.min.css';
 // Requiring in components
 import Header from './components/layouts/Header';
 import Contacts from './components/contacts/Contacts';
+import AddContact from './components/contacts/addContact';
+// Requiring in privider
 import {Provider} from './Context';
 
 function App() {
@@ -16,6 +18,7 @@ function App() {
       <div className="App">
         <Header/>
         <div className="container">
+          <AddContact/>
           <Contacts/>
         </div>
     </div>
