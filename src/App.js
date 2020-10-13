@@ -5,8 +5,8 @@ import './App.css';
 import 'bootstrap/dist/css/bootstrap.min.css';
 
 // Requiring in components
-import Header from './components/Header';
-import Contacts from './components/Contacts';
+import Header from './components/layouts/Header';
+import Contacts from './components/contacts/Contacts';
 import {Provider} from './Context';
 
 function App() {
