@@ -11,12 +11,22 @@ export class Contacts extends Component {
             { key: 3, name: 'Micheal Jackson', email: 'mjack@example.com', phone: '23749872389'}
         ]
     }
+
+    deleteContact = (id) => {
+        let newContacts = this.state.contacts.filter((contact) =>{
+            return (contact.key !== id)
+        });
+
+        this.setState({
+            contacts: newContacts
+        });
+    }
     render() {
         return (
             <div className="contacts">
                 {this.state.contacts.map((contact) =>{
                     return (
-                        <Contact key = {contact.key} name = {contact.name} phone = {contact.phone} email = {contact.email}/>
+                        <Contact key = {contact.key} name = {contact.name} phone = {contact.phone} email = {contact.email} deleteContact = {this.deleteContact.bind(this , contact.key)} />
                     )
                 })}
             </div>

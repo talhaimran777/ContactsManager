@@ -13,9 +13,9 @@ export class Contact extends Component {
     }
 
     deleteContactHandler = () => {
-        console.log('DeleteContactHandler!');
+        this.props.deleteContact();
     }
-    
+
     render() {
         return (
 
