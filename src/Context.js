@@ -12,7 +12,15 @@ const reducer = (state, action) =>{
                 // ...state means existing state
                 ...state,
                 contacts: state.contacts.filter(contact => contact.id !== action.payload)
-            }
+            };
+        case 'ADD_CONTACT':
+            // Adding a contact
+            return {
+                // ...state means existing state
+                ...state,
+
+                contacts: [action.payload, ...state.contacts]
+            };
         default:
             // return the state
             return state;
