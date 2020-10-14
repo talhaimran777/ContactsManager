@@ -1,6 +1,7 @@
 import React, { Component } from 'react';
 import {Consumer} from '../../Context';
 import uuid from 'react-uuid';
+import FormGroup from '../layouts/FormGroup';
 
 
 class addContact extends Component {
@@ -43,37 +44,13 @@ class addContact extends Component {
 
                             <div className="card-body">
                                 <form onSubmit={this.onHandleSubmit.bind(this, dispatch)}>
-                                    <div className="form-group">
-                                        <label htmlFor="name">Enter Name</label>
-                                        <input type ="text"
-                                            name = "name"
-                                            onChange={this.onChange}
-                                            value = {name}
-                                            placeholder = "Enter name..."
-                                            className="form-control form-control-lg"
-                                        />
-                                    </div>
 
-                                    <div className="form-group">
-                                        <label htmlFor="name">Enter Email</label>
-                                        <input type ="text"
-                                            name = "email"
-                                            onChange={this.onChange}
-                                            value = {email}
-                                            placeholder = "Enter email..."
-                                            className="form-control form-control-lg"
-                                        />
-                                    </div>
-                                    <div className="form-group">
-                                        <label htmlFor="name">Enter Number</label>
-                                        <input type ="text"
-                                            name = "phone"
-                                            onChange={this.onChange}
-                                            value = {phone}
-                                            placeholder = "Enter phone..."
-                                            className="form-control form-control-lg"
-                                        />
-                                    </div>
+                                    <FormGroup desc = 'Enter Name' name = 'name' value = {name} placeholder = 'Enter your name...' ON_CHANGE={this.onChange}/>
+
+                                    <FormGroup desc = 'Enter Email' name = 'email' value = {email} placeholder = 'Enter your email...' ON_CHANGE={this.onChange}/>
+
+
+                                    <FormGroup desc = 'Enter Phone' name = 'phone' value = {phone} placeholder = 'Enter your phone...' ON_CHANGE={this.onChange}/>
 
                                     <input type = "submit" value = "Add Contact" className="btn btn-outline-success btn-block"/>
                                 </form>
