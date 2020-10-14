@@ -24,6 +24,12 @@ class addContact extends Component {
         }
 
         dispatch({type: 'ADD_CONTACT', payload: newContact});
+
+        this.setState({
+            name: '',
+            email: '',
+            phone: ''
+        });
     }
 
 
@@ -38,8 +44,8 @@ class addContact extends Component {
                     const {dispatch} = value;
                     return(
                         <div className = "card mb-3">
-                            <div className="card-header">
-                                <h4 className = "text-center">Add Contact</h4>
+                            <div className="card-header bg-danger">
+                                <h4 className = "text-center text-light text-uppercase">Add Contact</h4>
                             </div>
 
                             <div className="card-body">
