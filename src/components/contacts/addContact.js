@@ -30,6 +30,9 @@ class addContact extends Component {
             email: '',
             phone: ''
         });
+
+        // After adding contact to the state redirect to the home page
+        this.props.history.push('/');
     }
 
 
