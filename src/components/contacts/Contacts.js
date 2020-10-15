@@ -14,7 +14,7 @@ export class Contacts extends Component {
 
                     return (
                         <div className="contacts">
-                            <h1 class = "display-4"> <span className="text-danger">Contact</span> List</h1>
+                            <h1 className = "display-4"> <span className="text-danger">Contact</span> List</h1>
                             {contacts.map((contact) =>{
                                 return (
                                     <Contact key = {contact.id} contact = {contact}/>

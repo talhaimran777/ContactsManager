@@ -19,17 +19,17 @@ export class Header extends Component {
                         <ul className = "navbar-nav ml-auto">
                             <li className = "nav-item mr-3">
                                 <Link to = '/' className = "nav-link"> 
-                                    <h5><i class="fas fa-home"></i> Home</h5>
+                                    <h5><i className="fas fa-home"></i> Home</h5>
                                 </Link>
                             </li>
                             <li className = "nav-item mr-3">
                                 <Link to = '/add-contact' className = "nav-link"> 
-                                    <h5><i class="fas fa-plus"></i> Add Contact</h5>
+                                    <h5><i className="fas fa-plus"></i> Add Contact</h5>
                                 </Link>
                             </li>
                             <li className = "nav-item mr-3">
                                 <Link to = '/about-page' className = "nav-link"> 
-                                    <h5><i class="fas fa-question"></i> About Page</h5>
+                                    <h5><i className="fas fa-question"></i> About Page</h5>
                                 </Link>
                             </li>
                         </ul>
